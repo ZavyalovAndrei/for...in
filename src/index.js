@@ -1,8 +1,13 @@
-import { app } from'./js/app';
+import { orderByProps } from "./js/app.js";
 
-const infoField = document.getElementById('info');
 
-const charactersInfo = [
-    
-]
-infoField.insertAdjacentHTML("afterbegin", charactersInfo.reduce((acc, value) => acc + '<p>' + value + '</p>', ""));
+const character = {
+  name: "мечник",
+  health: 10,
+  level: 2,
+  attack: 80,
+  defence: 40,
+};
+const sortItem = ["name", "level"];
+console.log(orderByProps(character, sortItem));
+
